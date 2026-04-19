@@ -12,7 +12,6 @@ const Footer = () => {
           <img src={logo} alt="" />
         </span>
 
-        {/* <h2 className="text-5xl font-bold mb-4">KeenKeeper</h2> */}
         <p className="text-gray-300 max-w-xl mx-auto mb-8">
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.

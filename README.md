@@ -1,16 +1,29 @@
-# React + Vite
+# KeenKeeper 🌿
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeenKeeper is a personal relationship management dashboard built with the **MERN** stack (React, Tailwind CSS, DaisyUI). It helps users maintain meaningful connections by tracking interactions, setting relationship goals, and providing visual analytics of their social habits.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Personal Dashboard:** View high-level stats like total friends, those needing attention, and monthly interactions.
+- **Friend Management:** Track specific contact goals for each friend with status indicators (On-Track, Almost Due, Overdue).
+- **Interactive Timeline:** A searchable and sortable history of all your social interactions (Calls, Texts, Video Chats).
+- **Friendship Analytics:** Visualized data using Recharts to see how you are spending your social energy.
+- **Quick Check-In:** One-click logging for interactions that automatically updates the timeline and stats.
+- **Modern UI:** Built with DaisyUI and Tailwind CSS for a clean, responsive, and professional experience.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React.js, React Router v7
+- **Styling:** Tailwind CSS, DaisyUI
+- **Icons & Graphics:** Custom PNG Assets
+- **Charts:** Recharts
+- **Notifications:** React Hot Toast
+- **State Management:** React Router Loaders & LocalStorage (Mock Persistence)
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/keenkeeper.git](https://github.com/your-username/keenkeeper.git)
+   cd keenkeeper
+   ```

@@ -5,7 +5,6 @@ import Friends from "../../Components/Friends/Friends";
 const Home = () => {
   const friends = useLoaderData();
 
-  // Dynamic calculation for the stats section
   const stats = [
     { label: "Total Friends", value: friends.length },
     {
@@ -16,7 +15,7 @@ const Home = () => {
       label: "Need Attention",
       value: friends.filter((f) => f.status !== "on-track").length,
     },
-    { label: "Interactions This Month", value: 12 }, // Static placeholder
+    { label: "Interactions This Month", value: 12 },
   ];
 
   return (

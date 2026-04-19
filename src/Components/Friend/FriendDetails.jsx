@@ -15,7 +15,6 @@ const FriendDetails = () => {
     overdue: "bg-[#f56565]",
   };
   const handleCheckIn = (type) => {
-    // 1. Create the new entry
     const newEntry = {
       date: new Date().toLocaleDateString("en-US", {
         month: "short",
@@ -27,10 +26,8 @@ const FriendDetails = () => {
       title: `${type} with ${friend.name}`,
     };
 
-    // 2. Get existing timeline from localStorage
     const existingTimeline = JSON.parse(localStorage.getItem("timeline")) || [];
 
-    // 3. Update and Save (Add to the beginning of the array)
     localStorage.setItem(
       "timeline",
       JSON.stringify([newEntry, ...existingTimeline]),
@@ -84,7 +81,6 @@ const FriendDetails = () => {
               </p>
             </div>
 
-            {/* Side Action Buttons */}
             <div className="space-y-3">
               <button className="btn btn-block bg-white border-gray-200 text-gray-700 hover:bg-gray-50 normal-case">
                 🔔 Snooze 2 Weeks
@@ -98,7 +94,6 @@ const FriendDetails = () => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Stats & Check-in */}
           <div className="lg:col-span-8 space-y-6">
             {/* Top Stat Row */}
             <div className="grid grid-cols-3 gap-4">
@@ -128,7 +123,6 @@ const FriendDetails = () => {
               </div>
             </div>
 
-            {/* Relationship Goal Card */}
             <div className="card bg-white border border-gray-100 shadow-sm p-6 rounded-2xl">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-bold text-gray-800">Relationship Goal</h3>
@@ -142,7 +136,6 @@ const FriendDetails = () => {
               </p>
             </div>
 
-            {/* Quick Check-In Card */}
             <div className="card bg-white border border-gray-100 shadow-sm p-6 rounded-2xl">
               <h3 className="font-bold text-gray-800 mb-6">Quick Check-In</h3>
               <div className="grid grid-cols-3 gap-4">

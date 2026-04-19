@@ -9,7 +9,6 @@ const Timeline = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("newest");
 
-  // Load data from localStorage
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("timeline")) || [];
     setEntries(data);

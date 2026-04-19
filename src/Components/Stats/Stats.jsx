@@ -12,17 +12,16 @@ import {
 const Stats = () => {
   const timelineData = useLoaderData() || [];
 
-  // Data processing: Count interactions by type
   const dataMap = timelineData.reduce((acc, entry) => {
-    const type = entry.title.split(" ")[0]; // Extract "Call", "Text", or "Video"
+    const type = entry.title.split(" ")[0];
     acc[type] = (acc[type] || 0) + 1;
     return acc;
   }, {});
 
   const chartData = [
-    { name: "Text", value: dataMap["Text"] || 0, color: "#8b5cf6" }, // Purple
-    { name: "Call", value: dataMap["Call"] || 0, color: "#2d4a3e" }, // Dark Green
-    { name: "Video", value: dataMap["Video"] || 0, color: "#34a853" }, // Green
+    { name: "Text", value: dataMap["Text"] || 0, color: "#8b5cf6" },
+    { name: "Call", value: dataMap["Call"] || 0, color: "#2d4a3e" },
+    { name: "Video", value: dataMap["Video"] || 0, color: "#34a853" },
   ];
 
   return (
@@ -46,10 +45,10 @@ const Stats = () => {
                   cy="50%"
                   innerRadius={85}
                   outerRadius={120}
-                  paddingAngle={10} // Gap between segments
-                  cornerRadius={10} // Rounded edges
+                  paddingAngle={10}
+                  cornerRadius={10}
                   dataKey="value"
-                  stroke="none" // Remove white border
+                  stroke="none"
                 >
                   {chartData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
