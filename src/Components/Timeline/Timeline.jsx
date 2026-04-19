@@ -11,6 +11,7 @@ const Timeline = () => {
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("timeline")) || [];
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEntries(data);
   }, []);
 
